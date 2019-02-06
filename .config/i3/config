@@ -148,7 +148,7 @@ bindsym $mod+r mode "resize"
 # }
 
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
-#exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/stoat2.png
+exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/stoat2.png
 
 exec_always --no-startup-id compton --config ~/.compton.conf
 
