@@ -78,6 +78,9 @@ tabspaces: 8
 
 # Font configuration (changes require restart)
 font:
+  normal:
+    family: Ubuntu Mono derivative Powerline
+
   # Normal (roman) font face
   #normal:
     # Font family
