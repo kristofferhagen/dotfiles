@@ -32,3 +32,6 @@ colorscheme onedark
 let g:lightline = {
   \ 'colorscheme': 'onedark',
   \ }
+
+" Disable the built-in mode indicator since this functionality is provided by lightline
+set noshowmode
