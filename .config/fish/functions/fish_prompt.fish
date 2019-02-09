@@ -17,13 +17,11 @@
 
 set -g current_bg NONE
 
-#if string match -q --regex '/dev/tty[0-9]' (tty)
-#  set segment_separator \u25BA
-#else
-#  set segment_separator \uE0B0
-#end
-
-set segment_separator \uE0B0
+if string match -q --regex '/dev/tty[0-9]' (tty)
+  set segment_separator \u25BA
+else
+  set segment_separator \uE0B0
+end
 
 set right_segment_separator \uE0B0
 set -q scm_prompt_blacklist; or set scm_prompt_blacklist
