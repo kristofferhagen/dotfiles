@@ -1,9 +1,14 @@
+if &shell =~# 'fish$'
+    set shell=sh
+endif
+
 call plug#begin('~/.config/nvim/plugged')
 
     Plug 'itchyny/lightline.vim' " Statusline
     Plug 'joshdick/onedark.vim' " A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
     Plug 'tpope/vim-fugitive' " A Git wrapper so awesome, it should be illegal
     Plug 'gcavallanti/vim-noscrollbar' " A scrollbar-like widget for the vim statusline
+    Plug 'dag/vim-fish' " Vim support for editing fish scripts
 
 call plug#end()
 
