@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# TODO: Remove blur effect and kill compton, starting it again after locking
-
 black="#282c34dd"
 white="#abb2bfff"
 lightred="#e06c75ff"
@@ -14,6 +12,9 @@ magenta="#c678ddff"
 cyan="#56b6c2ff"
 guttergrey="#4b5263ff"
 commentgray="#5c6370ff"
+
+# Switch to a dedicated lockscreen workspace
+i3-msg "workspace "
 
 # The name of the command to run
 command="i3lock"
