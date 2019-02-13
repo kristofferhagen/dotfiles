@@ -1,7 +1,7 @@
 ; vim: ft=cfg: set syntax=dosini:
 
 [colors]
-background = #50000000
+background = ${self.black}
 background-alt = ${self.black}
 foreground = #ffffff
 foreground-alt = #aaffffff
@@ -245,7 +245,7 @@ bar-used-foreground-9 = ${colors.dark-red}
 bar-used-indicator = |
 bar-used-fill = ─
 bar-used-empty = ─
-bar-used-empty-foreground = ${colors.background-alt}
+bar-used-empty-foreground = ${colors.gutter-gray}
 
 
 [module/cpu]
@@ -338,7 +338,7 @@ bar-used-foreground-4 = ${colors.dark-red}
 bar-used-indicator = |
 bar-used-fill = ─
 bar-used-empty = ─
-bar-used-empty-foreground = ${colors.background-alt}
+bar-used-empty-foreground = ${colors.gutter-gray}
 
 
 [module/temperature]
