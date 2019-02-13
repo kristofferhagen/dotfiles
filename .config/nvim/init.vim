@@ -18,6 +18,9 @@ set shiftwidth=4
 set expandtab
 set mouse=a
 
+set splitbelow
+set splitright
+
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <M-Left> :TmuxNavigateLeft<cr>
 nnoremap <silent> <M-Down> :TmuxNavigateDown<cr>
