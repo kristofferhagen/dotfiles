@@ -78,9 +78,6 @@ line-size = 2
 border-size = 0
 border-color = #00000000
 
-border-bottom-size = 1
-border-bottom-color = #80000000
-
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:
 ;   padding-{left,right}
