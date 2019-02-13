@@ -9,6 +9,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-fugitive' " A Git wrapper so awesome, it should be illegal
     Plug 'gcavallanti/vim-noscrollbar' " A scrollbar-like widget for the vim statusline
     Plug 'dag/vim-fish' " Vim support for editing fish scripts
+    Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes and vim splits
 
 call plug#end()
 
@@ -16,6 +17,13 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set mouse=a
+
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <M-Left> :TmuxNavigateLeft<cr>
+nnoremap <silent> <M-Down> :TmuxNavigateDown<cr>
+nnoremap <silent> <M-Up> :TmuxNavigateUp<cr>
+nnoremap <silent> <M-Right> :TmuxNavigateRight<cr>
+nnoremap <silent> <M-Tab> :TmuxNavigatePrevious<cr>
 
 " Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 " If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
