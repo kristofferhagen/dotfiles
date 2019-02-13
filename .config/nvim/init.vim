@@ -11,6 +11,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'dag/vim-fish' " Vim support for editing fish scripts
     Plug 'scrooloose/nerdtree' " A tree explorer plugin for vim.
     Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes and vim splits
+    Plug 'rust-lang/rust.vim' " Vim configuration for Rust.
+    Plug 'racer-rust/vim-racer' " Racer support for Vim
 
 call plug#end()
 
@@ -30,6 +32,11 @@ nnoremap <silent> <M-Down> :TmuxNavigateDown<cr>
 nnoremap <silent> <M-Up> :TmuxNavigateUp<cr>
 nnoremap <silent> <M-Right> :TmuxNavigateRight<cr>
 nnoremap <silent> <M-Tab> :TmuxNavigatePrevious<cr>
+
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 " Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 " If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
