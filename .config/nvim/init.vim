@@ -9,6 +9,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-fugitive' " A Git wrapper so awesome, it should be illegal
     Plug 'gcavallanti/vim-noscrollbar' " A scrollbar-like widget for the vim statusline
     Plug 'dag/vim-fish' " Vim support for editing fish scripts
+    Plug 'scrooloose/nerdtree' " A tree explorer plugin for vim.
     Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes and vim splits
 
 call plug#end()
@@ -20,6 +21,8 @@ set mouse=a
 
 set splitbelow
 set splitright
+
+map <C-n> :NERDTreeToggle<CR>
 
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <M-Left> :TmuxNavigateLeft<cr>
