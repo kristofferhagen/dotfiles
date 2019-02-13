@@ -46,7 +46,7 @@ scroll-down = i3wm-wsprev
 ;   modules-right = ipc clock
 modules-left = i3 xwindow
 modules-center = date
-modules-right = spotify volume filesystem memory cpu temperature ip-address
+modules-right = spotify microphone volume filesystem memory cpu temperature ip-address
 
 ; Dimension defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 width = 100%
