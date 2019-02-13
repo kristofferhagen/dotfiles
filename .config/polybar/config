@@ -409,7 +409,6 @@ interval = 1
 ; "click-(left|middle|right)" will be executed using "/usr/bin/env sh -c [command]"
 ;TODO: use a variable for workspace identifier?
 click-left = i3-msg "workspace 10:  "
-;click-left = i3-msg "workspace number 10"
 
 
 [module/microphone]
