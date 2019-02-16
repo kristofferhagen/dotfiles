@@ -78,7 +78,7 @@ timecolor=$white
 timestr='"%H:%M:%S"'
 
 # Sets the font used to render the time string.
-timefont='"Ubuntu Mono"'
+timefont='"Hack"'
 
 # Sets the font size for rendering the time string. Defaults to 32.
 timesize=32
@@ -91,7 +91,7 @@ datecolor=$white
 datestr='"%Y-%m-%d"'
 
 # Sets the font used to render the date string.
-datefont='"Ubuntu Mono"'
+datefont='"Hack"'
 
 # Sets the font size for rendering the date string. Defaults to 14.
 datesize=14
