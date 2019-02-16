@@ -27,11 +27,11 @@ set splitright
 map <C-n> :NERDTreeToggle<CR>
 
 let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <M-Left> :TmuxNavigateLeft<cr>
-nnoremap <silent> <M-Down> :TmuxNavigateDown<cr>
-nnoremap <silent> <M-Up> :TmuxNavigateUp<cr>
+nnoremap <silent> <M-Left>  :TmuxNavigateLeft<cr>
+nnoremap <silent> <M-Down>  :TmuxNavigateDown<cr>
+nnoremap <silent> <M-Up>    :TmuxNavigateUp<cr>
 nnoremap <silent> <M-Right> :TmuxNavigateRight<cr>
-nnoremap <silent> <M-Tab> :TmuxNavigatePrevious<cr>
+nnoremap <silent> <M-Tab>   :TmuxNavigatePrevious<cr>
 
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
