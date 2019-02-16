@@ -88,7 +88,7 @@ datecolor=$white
 
 # Sets the format used for generating the date string.
 # See strftime(3) for a full list of format specifiers.
-datestr='"%A, %m %Y"'
+datestr='"%Y-%m-%d"'
 
 # Sets the font used to render the date string.
 datefont='"Ubuntu Mono"'
