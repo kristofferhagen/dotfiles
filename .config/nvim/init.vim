@@ -58,121 +58,6 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 syntax on
 colorscheme onedark
 
-" Statusline {{{
-" itchyny/lightline.vim: Hide the encoding field in NERDTree splits
-function! LightlineFileEncoding()
-  if &filetype !=? 'nerdtree'
-    return &fileencoding
-  else
-    return ''
-  endif
-endfunction
-
-" itchyny/lightline.vim: Hide the fileformat field in NERDTree splits
-function! LightlineFileFormat()
-  if &filetype !=? 'nerdtree'
-    return &fileformat
-  else
-    return ''
-  endif
-endfunction
-
-" itchyny/lightline.vim: Hide the filename field in NERDTree splits
-function! LightlineFileName()
-  let filename = expand('%')
-
-  if &filetype !=? 'nerdtree' && filename !=? 'ControlP'
-
-    if filename ==# ''
-      return '[No Name]'
-    endif
-
-    let parts = split(filename, ':')
-
-    " Show the shell with full path as filename
-    if parts[0] ==# 'term'
-      return parts[-1]
-    endif
-
-    return filename
-  else
-    return ''
-  endif
-endfunction
-
-" itchyny/lightline.vim: Hide the filetype field in NERDTree splits
-function! LightlineFileType()
-  if &filetype !=? 'nerdtree'
-    return &filetype
-  else
-    return ''
-  endif
-endfunction
-
-" itchyny/lightline.vim: Hide the lineinfo field in NERDTree splits
-function! LightlineLineInfo()
-  if &filetype !=? 'nerdtree'
-    return line('.').':'. col('.')
-  else
-    return ''
-  endif
-endfunction
-
-" itchyny/lightline.vim: Show plugin name instead of normal as the mode
-function! LightlineMode()
-  return expand('%:t') ==# '__Tagbar__' ? 'Tagbar' :
-       \ expand('%:t') ==# 'ControlP' ? 'CtrlP' :
-       \ &filetype ==# 'nerdtree' ?  'NERDTree' :
-       \ &filetype ==# 'unite' ? 'Unite' :
-       \ &filetype ==# 'vimfiler' ? 'VimFiler' :
-       \ &filetype ==# 'vimshell' ? 'VimShell' :
-       \ lightline#mode()
-endfunction
-
-" itchyny/lightline.vim: Hide the modified field in NERDTree splits
-function! LightlineModified()
-  if &filetype !=? 'nerdtree' && &modified == 1
-    return '+'
-  else
-    return ''
-  endif
-endfunction
-
-" itchyny/lightline.vim: Hide the percent field in NERDTree splits
-" TODO: Consider adding a different field for this only for NERDTree so that it
-"       doesn't get the colored background.
-function! LightlinePercent()
-  if &filetype !=? 'nerdtree'
-    return line('.') * 100 / line('$') . '%'
-  else
-    return ''
-  endif
-endfunction
-
-" gcavallanti/vim-noscrollbar
-" https://github.com/maximbaz/dotfiles/blob/64154db7eb1c9434576c1b52959aaf3f7ba21e3c/.config/nvim/init.vim#L354
-function! LightlineScrollbar()
-  let top_line = str2nr(line('w0'))
-  let bottom_line = str2nr(line('w$'))
-  let lines_count = str2nr(line('$'))
-
-  if bottom_line - top_line + 1 >= lines_count
-    return ''
-  endif
-
-  let window_width = winwidth(0)
-  if window_width < 90
-    let scrollbar_width = 6
-  elseif window_width < 120
-    let scrollbar_width = 9
-  else
-    let scrollbar_width = 12
-  endif
-
-  "return noscrollbar#statusline(scrollbar_width, '-', '#')
-  return noscrollbar#statusline(scrollbar_width, '-','█',['▐'],['▌'])
-endfunction
-
 " itchyny/lightline.vim
 let g:lightline = {
     \ 'active': {
@@ -187,20 +72,19 @@ let g:lightline = {
     \   ]
     \ },
     \ 'component_function': {
-    \   'fileencoding': 'LightlineFileEncoding',
-    \   'fileformat':   'LightlineFileFormat',
-    \   'filename':     'LightlineFileName',
-    \   'filetype':     'LightlineFileType',
+    \   'fileencoding': 'kristofferhagen#statusline#FileEncoding',
+    \   'fileformat':   'kristofferhagen#statusline#FileFormat',
+    \   'filename':     'kristofferhagen#statusline#FileName',
+    \   'filetype':     'kristofferhagen#statusline#FileType',
     \   'gitbranch':    'fugitive#head',
-    \   'lineinfo':     'LightlineLineInfo',
-    \   'mode':         'LightlineMode',
-    \   'modified':     'LightlineModified',
-    \   'percent':      'LightlinePercent',
-    \   'scrollbar':    'LightlineScrollbar',
+    \   'lineinfo':     'kristofferhagen#statusline#LineInfo',
+    \   'mode':         'kristofferhagen#statusline#Mode',
+    \   'modified':     'kristofferhagen#statusline#Modified',
+    \   'percent':      'kristofferhagen#statusline#Percent',
+    \   'scrollbar':    'kristofferhagen#statusline#Scrollbar',
     \ },
     \ 'colorscheme': 'onedark',
     \ }
-" }}}
 
 " Disable the built-in mode indicator since this functionality is provided by lightline
 set noshowmode
