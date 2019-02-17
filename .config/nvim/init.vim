@@ -21,6 +21,7 @@ set shiftwidth=4
 set expandtab
 set mouse=a
 set number relativenumber
+set list listchars=tab:>-,trail:~,extends:>,precedes:<
 set incsearch
 
 set splitbelow
