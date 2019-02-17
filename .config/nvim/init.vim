@@ -16,6 +16,11 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim' " fzf heart vim
     Plug 'tomtom/tcomment_vim' " An extensible & universal comment vim-plugin that also handles embedded filetypes
+    Plug 'tpope/vim-characterize' " Unicode character metadata with `ga`
+    Plug 'tpope/vim-jdaddy' " JSON manipulation and pretty printing, `aj` and `ij` text objects
+    Plug 'tpope/vim-surround' " Quoting/parenthesizing made simple
+    Plug 'tpope/vim-abolish' " Easily search for, substitute, and abbreviate multiple variants of a word
+    Plug 'tpope/vim-repeat' " Enable repeating supported plugin maps with '.'
 
 call plug#end()
 
