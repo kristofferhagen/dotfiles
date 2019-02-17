@@ -15,6 +15,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'racer-rust/vim-racer' " Racer support for Vim
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim' " fzf heart vim
+    Plug 'tomtom/tcomment_vim' " An extensible & universal comment vim-plugin that also handles embedded filetypes
 
 call plug#end()
 
@@ -44,6 +45,21 @@ nnoremap <silent> <M-Down>  :TmuxNavigateDown<cr>
 nnoremap <silent> <M-Up>    :TmuxNavigateUp<cr>
 nnoremap <silent> <M-Right> :TmuxNavigateRight<cr>
 nnoremap <silent> <M-Tab>   :TmuxNavigatePrevious<cr>
+
+" tomtom/tcomment_vim
+let g:tcomment_maps = 0
+nmap g<  <Plug>TComment_Uncomment
+nmap g<b <Plug>TComment_Uncommentb
+nmap g<c <Plug>TComment_Uncommentc
+nmap g>  <Plug>TComment_Comment
+nmap g>b <Plug>TComment_Commentb
+nmap g>c <Plug>TComment_Commentc
+nmap gc  <Plug>TComment_gc
+nmap gcb <Plug>TComment_gcb
+nmap gcc <Plug>TComment_gcc
+xmap g<  <Plug>TComment_Uncomment
+xmap g>  <Plug>TComment_Comment
+xmap gc  <Plug>TComment_gc
 
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
