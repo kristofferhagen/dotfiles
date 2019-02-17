@@ -25,6 +25,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'kana/vim-textobj-user' " Create your own text objects
     Plug 'glts/vim-textobj-comment' " Vim text objects for comments
     Plug 'wellle/targets.vim' " Vim plugin that provides additional text objects
+    Plug 'editorconfig/editorconfig-vim' " EditorConfig plugin for Vim
 
 call plug#end()
 
