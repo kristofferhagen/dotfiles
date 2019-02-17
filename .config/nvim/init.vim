@@ -13,6 +13,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes and vim splits
     Plug 'rust-lang/rust.vim' " Vim configuration for Rust.
     Plug 'racer-rust/vim-racer' " Racer support for Vim
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf.vim' " fzf heart vim
 
 call plug#end()
 
@@ -25,6 +27,8 @@ set list listchars=tab:>-,trail:~,extends:>,precedes:<
 set cursorline
 set showmatch
 set incsearch
+
+nnoremap <C-p> :Files<cr>
 
 set splitbelow
 set splitright
