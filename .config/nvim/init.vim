@@ -26,6 +26,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'glts/vim-textobj-comment' " Vim text objects for comments
     Plug 'wellle/targets.vim' " Vim plugin that provides additional text objects
     Plug 'editorconfig/editorconfig-vim' " EditorConfig plugin for Vim
+    Plug 'airblade/vim-gitgutter' " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
 
 call plug#end()
 
