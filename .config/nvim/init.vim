@@ -22,6 +22,9 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-abolish' " Easily search for, substitute, and abbreviate multiple variants of a word
     Plug 'tpope/vim-repeat' " Enable repeating supported plugin maps with '.'
     Plug 'junegunn/vim-easy-align' " A Vim alignment plugin
+    Plug 'kana/vim-textobj-user' " Create your own text objects
+    Plug 'glts/vim-textobj-comment' " Vim text objects for comments
+    Plug 'wellle/targets.vim' " Vim plugin that provides additional text objects
 
 call plug#end()
 
