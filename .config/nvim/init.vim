@@ -20,9 +20,13 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set mouse=a
+set incsearch
 
 set splitbelow
 set splitright
+
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
 
 map <C-n> :NERDTreeToggle<CR>
 
