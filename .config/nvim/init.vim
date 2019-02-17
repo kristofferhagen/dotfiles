@@ -22,6 +22,7 @@ set expandtab
 set mouse=a
 set number relativenumber
 set list listchars=tab:>-,trail:~,extends:>,precedes:<
+set showmatch
 set incsearch
 
 set splitbelow
