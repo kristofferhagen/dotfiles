@@ -35,6 +35,9 @@ set cursorline
 set showmatch
 set incsearch
 
+" highlight last inserted text
+nnoremap gV `[v`]
+
 nnoremap <C-p> :Files<cr>
 
 set splitbelow
