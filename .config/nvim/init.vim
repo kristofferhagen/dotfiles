@@ -21,6 +21,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-surround' " Quoting/parenthesizing made simple
     Plug 'tpope/vim-abolish' " Easily search for, substitute, and abbreviate multiple variants of a word
     Plug 'tpope/vim-repeat' " Enable repeating supported plugin maps with '.'
+    Plug 'junegunn/vim-easy-align' " A Vim alignment plugin
 
 call plug#end()
 
@@ -65,6 +66,11 @@ nmap gcc <Plug>TComment_gcc
 xmap g<  <Plug>TComment_Uncomment
 xmap g>  <Plug>TComment_Comment
 xmap gc  <Plug>TComment_gc
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
