@@ -29,6 +29,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'airblade/vim-gitgutter' " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
     Plug 'fatih/vim-go' " Go development plugin for Vim
     Plug 'Valloric/YouCompleteMe'
+    Plug 'tpope/vim-eunuch' " Helpers for UNIX
 
 call plug#end()
 
