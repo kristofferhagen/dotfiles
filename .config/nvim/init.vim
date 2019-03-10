@@ -27,6 +27,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'wellle/targets.vim' " Vim plugin that provides additional text objects
     Plug 'editorconfig/editorconfig-vim' " EditorConfig plugin for Vim
     Plug 'airblade/vim-gitgutter' " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
+    Plug 'fatih/vim-go' " Go development plugin for Vim
 
 call plug#end()
 
@@ -39,6 +40,8 @@ set list listchars=tab:>-,trail:~,extends:>,precedes:<
 set cursorline
 set showmatch
 set incsearch
+
+let g:go_fmt_command = "goimports"
 
 " highlight last inserted text
 nnoremap gV `[v`]
@@ -84,6 +87,8 @@ au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
+
+au FileType go nmap <F5> :GoTest<cr>
 
 " Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 " If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
