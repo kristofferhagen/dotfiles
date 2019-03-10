@@ -38,7 +38,7 @@ set shiftwidth=4
 set expandtab
 set mouse=a
 set number relativenumber
-set list listchars=tab:>-,trail:~,extends:>,precedes:<
+set list listchars=tab:>\ ,trail:~,extends:>,precedes:<
 set cursorline
 set showmatch
 set incsearch
