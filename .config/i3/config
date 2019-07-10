@@ -217,7 +217,7 @@ focus_follows_mouse no
 
 bindsym $mod+d exec rofi -show run -matching fuzzy
 bindsym $mod+Shift+d exec rofi -show drun -matching fuzzy
-bindsym $mod+Tab exec rofi -show window -matching fuzzy
+# bindsym $mod+Tab exec rofi -show window -matching fuzzy
 
 # https://gitcrate.org/qtools/rofi-top
 bindsym $mod+t exec rofi -show top -modi top
@@ -240,3 +240,5 @@ bindsym $mod+s exec ~/.config/i3/spotify.sh
 
 #bindsym $mod+Tab exec "i3-msg workspace $(i3-msg -t get_workspaces | jq '(.[] | select(.visible) | .num) as $current | [(.[] | select(.num > $current)), .[0]] | first .name')"
 #bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Shift+Tab workspace prev
+bindsym $mod+Tab workspace next
