@@ -189,8 +189,7 @@ client.urgent           #be5046 #282c34 #282c34 #61afef #be5046
 client.placeholder      #000000 #282c34 #5c6370 #000000 #282c34
 client.background       #ffffff
 
-bindsym --release $mod+x exec --no-startup-id import /tmp/latest-screenshot.png
-bindsym --release $mod+Shift+s exec --no-startup-id import /tmp/latest-screenshot.png
+bindsym --release $mod+Shift+s exec ~/.config/i3/screenshot.sh
 
 bindsym XF86AudioPlay  exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
