@@ -229,10 +229,13 @@ bindsym $mod+g exec ~/.config/rofi/bin/rofi-godoc-stdlib.sh
 
 assign [class="discord"] $ws9
 
-for_window [class="Spotify"] move to workspace $ws10
+# for_window [class="Spotify"] move to workspace $ws10
 # The line below doesn't work since Spotify doesn't set hints when mapping the window
 # See: https://github.com/i3/i3/issues/2060
 # assign [class="Spotify"] $ws10
+
+for_window [class="Spotify"] move scratchpad
+bindsym $mod+s exec ~/.config/i3/spotify.sh
 
 
 #bindsym $mod+Tab exec "i3-msg workspace $(i3-msg -t get_workspaces | jq '(.[] | select(.visible) | .num) as $current | [(.[] | select(.num > $current)), .[0]] | first .name')"
