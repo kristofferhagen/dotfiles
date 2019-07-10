@@ -249,3 +249,6 @@ bindsym $mod+Tab workspace next
 bindsym $mod+bar workspace back_and_forth
 
 bindsym $mod+shift+m exec mpv `rofi -dmenu -p "mpv"`
+
+for_window [class="keepassxc"] move scratchpad
+bindsym $mod+k exec ~/.config/i3/keepassxc.sh
