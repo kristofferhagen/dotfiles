@@ -242,3 +242,5 @@ bindsym $mod+s exec ~/.config/i3/spotify.sh
 #bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+Tab workspace next
+
+bindsym $mod+bar workspace back_and_forth
