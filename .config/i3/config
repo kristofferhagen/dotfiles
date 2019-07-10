@@ -9,6 +9,9 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# Supported keyboard character names:
+# https://help.ubuntu.com/community/GtkComposeTable
+
 # Use the Windows key as modifier
 set $mod Mod4
 
