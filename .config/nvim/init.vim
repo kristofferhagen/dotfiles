@@ -16,7 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim' " fzf heart vim
     Plug 'tomtom/tcomment_vim' " An extensible & universal comment vim-plugin that also handles embedded filetypes
-    Plug 'tpope/vim-characterize' " Unicode character metadata with `ga`
+    " Plug 'tpope/vim-characterize' " Unicode character metadata with `ga`
     Plug 'tpope/vim-jdaddy' " JSON manipulation and pretty printing, `aj` and `ij` text objects
     Plug 'tpope/vim-surround' " Quoting/parenthesizing made simple
     Plug 'tpope/vim-abolish' " Easily search for, substitute, and abbreviate multiple variants of a word
@@ -83,7 +83,9 @@ xmap gc  <Plug>TComment_gc
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
+" TODO: This doesn't work in normal mode, most likely because of the other ga
+" binding in normal mode; tpope/vim-characterize.
+" nmap ga <Plug>(EasyAlign)
 
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
