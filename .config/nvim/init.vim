@@ -31,6 +31,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'Valloric/YouCompleteMe'
     Plug 'tpope/vim-eunuch' " Helpers for UNIX
     Plug 'arcticicestudio/nord-vim' " An arctic, north-bluish clean and elegant Vim theme
+    Plug 'chr4/nginx.vim' " Improved nginx vim plugin (incl. syntax highlighting)
 
 call plug#end()
 
