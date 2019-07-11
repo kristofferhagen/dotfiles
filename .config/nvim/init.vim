@@ -30,6 +30,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'fatih/vim-go' " Go development plugin for Vim
     Plug 'Valloric/YouCompleteMe'
     Plug 'tpope/vim-eunuch' " Helpers for UNIX
+    Plug 'arcticicestudio/nord-vim' " An arctic, north-bluish clean and elegant Vim theme
 
 call plug#end()
 
@@ -112,7 +113,7 @@ au FileType go nmap <F5> :GoTest<cr>
 "endif
 
 syntax on
-colorscheme onedark
+colorscheme nord
 
 " itchyny/lightline.vim
 let g:lightline = {
@@ -139,7 +140,7 @@ let g:lightline = {
     \   'percent':      'kristofferhagen#statusline#Percent',
     \   'scrollbar':    'kristofferhagen#statusline#Scrollbar',
     \ },
-    \ 'colorscheme': 'onedark',
+    \ 'colorscheme': 'nord',
     \ }
 
 " Disable the built-in mode indicator since this functionality is provided by lightline
