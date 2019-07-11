@@ -1,3 +1,6 @@
+" TOOD: https://github.com/tpope/tpope
+" TODO: Swap , and ; keybindings
+
 if &shell =~# 'fish$'
     set shell=sh
 endif
@@ -34,6 +37,20 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'chr4/nginx.vim' " Improved nginx vim plugin (incl. syntax highlighting)
     Plug 'vim-pandoc/vim-pandoc'
     Plug 'vim-pandoc/vim-pandoc-syntax'
+
+    " TODO: Commenting
+    "        - https://github.com/tpope/vim-commentary
+    "        - https://github.com/tomtom/tcomment_vim
+    "        - https://github.com/scrooloose/nerdcommenter
+
+    " TODO: https://github.com/tpope/vim-vinegar
+    " TODO: https://github.com/tpope/vim-speeddating
+    " TODO: https://github.com/svermeulen/vim-easyclip
+    " TODO: https://github.com/tpope/vim-apathy
+    " TODO: https://github.com/tpope/vim-rsi
+    " TODO: https://github.com/tpope/vim-unimpaired
+    " TODO: https://github.com/tpope/vim-eunuch
+    " TODO: https://github.com/arthurxavierx/vim-caser - Alternative to tpope/vim-abolish
 
 call plug#end()
 
