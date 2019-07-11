@@ -32,8 +32,13 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-eunuch' " Helpers for UNIX
     Plug 'arcticicestudio/nord-vim' " An arctic, north-bluish clean and elegant Vim theme
     Plug 'chr4/nginx.vim' " Improved nginx vim plugin (incl. syntax highlighting)
+    Plug 'vim-pandoc/vim-pandoc'
+    Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
+
+let g:pandoc#syntax#conceal#use = 0
+let g:pandoc#modules#disabled = ["folding", "spell"]
 
 set tabstop=4
 set shiftwidth=4
@@ -95,6 +100,7 @@ au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 au FileType go nmap <F5> :GoTest<cr>
+au FileType pandoc nmap <silent> <F5> :Pandoc! pdf<cr>
 
 " Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 " If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
