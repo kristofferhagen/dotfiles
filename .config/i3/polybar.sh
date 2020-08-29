@@ -7,4 +7,6 @@ killall -q polybar
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch polybar
-polybar -c /home/kristoffer/.config/polybar/config desktop-top &
+for m in $(polybar --list-monitors | cut -d":" -f1); do
+    MONITOR=$m polybar -c /home/kristoffer/.config/polybar/config.ini desktop-top &
+done
