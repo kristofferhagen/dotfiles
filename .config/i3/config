@@ -151,7 +151,7 @@ bindsym $mod+r mode "resize"
 # }
 
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
-exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/stoat2.png
+exec_always --no-startup-id feh --bg-scale ~/wallpaper.png
 
 exec_always --no-startup-id compton --config ~/.compton.conf
 
@@ -207,7 +207,7 @@ bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Mas
 bindsym Shift+XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%-
 
 # TODO: $mod+Shift+l only shows the background image, not a blurred screenshot
-bindsym $mod+Shift+l exec i3lock --image Pictures/Wallpapers/stoat2.png --ignore-empty-password
+bindsym $mod+Shift+l exec i3lock --image wallpaper.png --ignore-empty-password
 bindsym $mod+l exec ~/.config/i3/lock.sh
 
 bindsym $mod+Shift+f exec firefox
