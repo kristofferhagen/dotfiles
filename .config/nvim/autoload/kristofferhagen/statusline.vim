@@ -87,27 +87,3 @@ function! kristofferhagen#statusline#Percent()
     return ''
   endif
 endfunction
-
-" gcavallanti/vim-noscrollbar
-" https://github.com/maximbaz/dotfiles/blob/64154db7eb1c9434576c1b52959aaf3f7ba21e3c/.config/nvim/init.vim#L354
-function! kristofferhagen#statusline#Scrollbar()
-  let top_line = str2nr(line('w0'))
-  let bottom_line = str2nr(line('w$'))
-  let lines_count = str2nr(line('$'))
-
-  if bottom_line - top_line + 1 >= lines_count
-    return ''
-  endif
-
-  let window_width = winwidth(0)
-  if window_width < 90
-    let scrollbar_width = 6
-  elseif window_width < 120
-    let scrollbar_width = 9
-  else
-    let scrollbar_width = 12
-  endif
-
-  "return noscrollbar#statusline(scrollbar_width, '-', '#')
-  return noscrollbar#statusline(scrollbar_width, '-','█',['▐'],['▌'])
-endfunction

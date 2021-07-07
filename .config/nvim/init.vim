@@ -10,7 +10,6 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'itchyny/lightline.vim' " Statusline
     Plug 'joshdick/onedark.vim' " A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
     Plug 'tpope/vim-fugitive' " A Git wrapper so awesome, it should be illegal
-    Plug 'gcavallanti/vim-noscrollbar' " A scrollbar-like widget for the vim statusline
     Plug 'dag/vim-fish' " Vim support for editing fish scripts
     Plug 'scrooloose/nerdtree' " A tree explorer plugin for vim.
     Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes and vim splits
@@ -153,7 +152,7 @@ let g:lightline = {
     \   'right': [
     \     ['lineinfo'],
     \     ['percent'],
-    \     ['fileformat', 'fileencoding', 'filetype', 'scrollbar']
+    \     ['fileformat', 'fileencoding', 'filetype']
     \   ]
     \ },
     \ 'component_function': {
@@ -166,7 +165,6 @@ let g:lightline = {
     \   'mode':         'kristofferhagen#statusline#Mode',
     \   'modified':     'kristofferhagen#statusline#Modified',
     \   'percent':      'kristofferhagen#statusline#Percent',
-    \   'scrollbar':    'kristofferhagen#statusline#Scrollbar',
     \ },
     \ 'colorscheme': 'nord',
     \ }
