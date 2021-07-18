@@ -206,7 +206,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 1%
 bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
 bindsym Shift+XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%-
 
-bindsym $mod+Shift+l exec i3lock --image wallpaper.png --ignore-empty-password
+bindsym $mod+x exec i3lock --image wallpaper.png --ignore-empty-password
 # bindsym $mod+l exec ~/.config/i3/lock.sh
 
 bindsym $mod+Shift+f exec firefox
