@@ -227,14 +227,6 @@ bindsym $mod+t exec rofi -show top -modi top
 bindsym $mod+g exec ~/.config/rofi/bin/rofi-godoc-stdlib.sh
 
 # TODO: Consider adding https://github.com/dunst-project/dunst
-# TODO: associate certain programs with a specific workspace
-
-assign [class="discord"] $ws9
-
-# for_window [class="Spotify"] move to workspace $ws10
-# The line below doesn't work since Spotify doesn't set hints when mapping the window
-# See: https://github.com/i3/i3/issues/2060
-# assign [class="Spotify"] $ws10
 
 for_window [class="Spotify"] move scratchpad
 bindsym $mod+s exec ~/.config/i3/spotify.sh
