@@ -218,9 +218,6 @@ bindsym $mod+d exec rofi -show run -matching fuzzy
 bindsym $mod+Shift+d exec rofi -show drun -matching fuzzy
 # bindsym $mod+Tab exec rofi -show window -matching fuzzy
 
-# https://gitcrate.org/qtools/rofi-top
-bindsym $mod+t exec rofi -show top -modi top
-
 bindsym $mod+g exec ~/.config/rofi/bin/rofi-godoc-stdlib.sh
 
 # TODO: Consider adding https://github.com/dunst-project/dunst
