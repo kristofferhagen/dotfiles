@@ -103,6 +103,8 @@ set cursorline
 set showmatch
 set incsearch
 
+set textwidth=74
+
 let g:go_fmt_command = "goimports"
 
 " highlight last inserted text
