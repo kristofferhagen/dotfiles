@@ -87,9 +87,9 @@ let g:compe.source.ultisnips = v:true
 let g:compe.source.luasnip = v:true
 let g:compe.source.emoji = v:true
 
-lua require'lspconfig'.gopls.setup{}
-lua require'lspconfig'.tsserver.setup{}
-lua require'lspconfig'.phpactor.setup{}
+lua vim.lsp.enable('gopls')
+lua vim.lsp.enable('tsserver')
+lua vim.lsp.enable('phpactor')
 
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 
