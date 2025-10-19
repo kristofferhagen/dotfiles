@@ -1,3 +1,35 @@
+function! kristofferhagen#statusline#Setup()
+  " itchyny/lightline.vim
+  let g:lightline = {
+      \ 'active': {
+      \   'left': [
+      \     ['mode', 'paste'],
+      \     ['gitbranch', 'readonly', 'filename', 'modified']
+      \   ],
+      \   'right': [
+      \     ['lineinfo'],
+      \     ['percent'],
+      \     ['fileformat', 'fileencoding', 'filetype']
+      \   ]
+      \ },
+      \ 'component_function': {
+      \   'fileencoding': 'kristofferhagen#statusline#FileEncoding',
+      \   'fileformat':   'kristofferhagen#statusline#FileFormat',
+      \   'filename':     'kristofferhagen#statusline#FileName',
+      \   'filetype':     'kristofferhagen#statusline#FileType',
+      \   'gitbranch':    'fugitive#head',
+      \   'lineinfo':     'kristofferhagen#statusline#LineInfo',
+      \   'mode':         'kristofferhagen#statusline#Mode',
+      \   'modified':     'kristofferhagen#statusline#Modified',
+      \   'percent':      'kristofferhagen#statusline#Percent',
+      \ },
+      \ 'colorscheme': 'gruvbox_material',
+      \ }
+
+  " Disable the built-in mode indicator since this functionality is provided by lightline
+  set noshowmode
+endfunction
+
 " Hide the encoding field in NERDTree splits
 function! kristofferhagen#statusline#FileEncoding()
   if &filetype !=? 'nerdtree'
