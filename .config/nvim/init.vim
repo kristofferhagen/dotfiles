@@ -7,8 +7,11 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
-    Plug 'itchyny/lightline.vim' " Statusline
+    " Colorschemes
     Plug 'joshdick/onedark.vim' " A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
+    Plug 'sainnhe/gruvbox-material' " Gruvbox with Material Palette
+
+    Plug 'itchyny/lightline.vim' " Statusline
     Plug 'tpope/vim-fugitive' " A Git wrapper so awesome, it should be illegal
     Plug 'dag/vim-fish' " Vim support for editing fish scripts
     Plug 'scrooloose/nerdtree' " A tree explorer plugin for vim.
@@ -183,7 +186,7 @@ au FileType pandoc nmap <silent> <F5> :Pandoc! pdf<cr>
 "endif
 
 syntax on
-colorscheme nord
+colorscheme gruvbox-material
 
 " itchyny/lightline.vim
 let g:lightline = {
@@ -209,7 +212,7 @@ let g:lightline = {
     \   'modified':     'kristofferhagen#statusline#Modified',
     \   'percent':      'kristofferhagen#statusline#Percent',
     \ },
-    \ 'colorscheme': 'nord',
+    \ 'colorscheme': 'gruvbox_material',
     \ }
 
 " Disable the built-in mode indicator since this functionality is provided by lightline
