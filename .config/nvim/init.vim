@@ -54,6 +54,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'hrsh7th/vim-vsnip-integ'
     Plug 'rafamadriz/friendly-snippets'
 
+    Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+
     " TODO: Commenting
     "        - https://github.com/tpope/vim-commentary
     "        - https://github.com/tomtom/tcomment_vim
