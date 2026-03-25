@@ -86,6 +86,7 @@ EOF
     lua vim.lsp.enable('tsserver')
     lua vim.lsp.enable('phpactor')
 
+    lua vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap=true, silent=true })
 end
 
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
