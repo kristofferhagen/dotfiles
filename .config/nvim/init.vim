@@ -76,9 +76,16 @@ if has('nvim')
     lua require("kristofferhagen.treesitter")
     lua require("kristofferhagen.cmp")
 
+    lua << EOF
+    local lspconfig = vim.lsp.config("gopls", {
+        cmd = { vim.fs.joinpath(vim.env.HOME, "go", "bin", "gopls") }
+    })
+EOF
+
     lua vim.lsp.enable('gopls')
     lua vim.lsp.enable('tsserver')
     lua vim.lsp.enable('phpactor')
+
 end
 
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
